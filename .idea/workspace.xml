@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Simular primera regla provisional">
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Fix números negativos">
       <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,15 +165,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="24078000" />
-    </task>
-    <task id="LOCAL-00002" summary="UI provisional">
-      <option name="closed" value="true" />
-      <created>1714825454965</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714825454965</updated>
+      <workItem from="1716034256194" duration="24448000" />
     </task>
     <task id="LOCAL-00003" summary="Atributos PoblacionBacterias">
       <option name="closed" value="true" />
@@ -559,14 +551,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716062103915</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Fix números negativos">
+      <option name="closed" value="true" />
+      <created>1716062339375</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1716062339375</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lógica para eliminar poblacion (parecida al botón de MostrarDetallesPoblacion)" />
     <MESSAGE value="Mejor posicion de botones" />
     <MESSAGE value="guardar experimento en json" />
     <MESSAGE value="cargar experimento en json" />
@@ -591,6 +590,7 @@
     <MESSAGE value="Repartos de bacterias y comida a cada casilla" />
     <MESSAGE value="Ajuste de texto" />
     <MESSAGE value="Simular primera regla provisional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simular primera regla provisional" />
+    <MESSAGE value="Fix números negativos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix números negativos" />
   </component>
 </project>
