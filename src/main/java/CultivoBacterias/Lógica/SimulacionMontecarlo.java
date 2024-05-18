@@ -102,7 +102,11 @@ public class SimulacionMontecarlo extends JFrame {
                 // Comprobamos si hay suficiente comida para que una bacteria pueda comer 20 microgramos
                 if (cantidadComida[i][j] >= 20) {
                     // La bacteria come 20 microgramos de comida
-                    cantidadComida[i][j] -= 20;
+                    if (cantidadComida[i][j] >= 20) {
+                        cantidadComida[i][j] -= 20;
+                    } else {
+                        cantidadComida[i][j] = 0;
+                    }
 
                     // Generamos un número aleatorio entre 0 y 99
                     int aleatorio = (int) (Math.random() * 100);
@@ -132,11 +136,20 @@ public class SimulacionMontecarlo extends JFrame {
                             // No hacemos nada, la bacteria se queda en la misma celda
                         }
                     }
+
+                    // Verificamos si la cantidad de bacterias es negativa
+                    if (cantidadBacterias[i][j] < 0) {
+                        cantidadBacterias[i][j] = 0;
+                    }
                 }
                 // Si no hay suficiente comida para que la bacteria coma 20 microgramos, comprobamos si hay suficiente para comer 10 microgramos
                 else if (cantidadComida[i][j] > 9) {
                     // La bacteria come 10 microgramos de comida
-                    cantidadComida[i][j] -= 10;
+                    if (cantidadComida[i][j] >= 10) {
+                        cantidadComida[i][j] -= 10;
+                    } else {
+                        cantidadComida[i][j] = 0;
+                    }
 
                     // Generamos un número aleatorio entre 0 y 99
                     int aleatorio = (int) (Math.random() * 100);
@@ -165,6 +178,11 @@ public class SimulacionMontecarlo extends JFrame {
                         if (!movido) {
                             // No hacemos nada, la bacteria se queda en la misma celda
                         }
+                    }
+
+                    // Verificamos si la cantidad de bacterias es negativa
+                    if (cantidadBacterias[i][j] < 0) {
+                        cantidadBacterias[i][j] = 0;
                     }
                 }
                 // Si hay 9 microgramos o menos de comida, la bacteria muere
