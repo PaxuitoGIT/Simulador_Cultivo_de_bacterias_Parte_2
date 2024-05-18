@@ -10,9 +10,9 @@ package CultivoBacterias.Lógica;
 import java.io.Serializable;
 public class DosisAlimento implements Serializable {
     // Atributos de la clase DosisAlimento
-    private int comidaInicial;
+    private int comidaInicial; // Cantidad en microgramos
     private int diaConsumir;
-    private int comidaFinal;
+    private int comidaFinal; // Cantidad en microgramos
 
     // Constructor de la clase DosisAlimento
     public DosisAlimento(int comidaInicial, int diaConsumir, int comidaFinal) {
@@ -31,7 +31,7 @@ public class DosisAlimento implements Serializable {
         else if (dia <= 30) {
             double decrementoDiario = (double) (comidaInicial - comidaFinal) / (30 - diaConsumir);
             int cantidadComida = (int) Math.round(comidaInicial - decrementoDiario * (dia - diaConsumir));
-            return Math.max(Math.min(cantidadComida, 300), 0);
+            return Math.max(Math.min(cantidadComida, 300000), 0);
         }
         // Si el día es mayor que 30, la cantidad de comida es la comida final
         else {
