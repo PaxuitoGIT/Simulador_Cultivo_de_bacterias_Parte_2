@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -34,7 +35,7 @@ public class UI {
      JPanel crearExperimentoPanel, mainPanel, buttonsPanel;
      JLabel nombreLabel, fechaInicioLabel, fechaFinLabel, numBacteriasLabel, temperaturaLabel, luminosidadLabel, dosisInicialLabel, diaConsumirLabel, comidaInicialLabel, comidaFinalLabel;
      JXTextField nombreField, numBacteriasField, temperaturaField, luminosidadField, dosisInicialField, diaConsumirField, comidaInicialField, comidaFinalField;
-     JXDatePicker fechaInicioPicker, fechaFinPicker;
+     JXDatePicker fechaInicioPicker, fechaFinPicker, fechaConsumirPicker;
 
      private Experimento experimentoActual;
      private String nombreArchivoActual;
@@ -168,6 +169,22 @@ public class UI {
             fechaFinLabel = new JLabel("Fecha de Fin:");
             fechaFinPicker = new JXDatePicker();
 
+            // Crea un selector de fecha para la fecha de consumo con SwingX
+            fechaConsumirPicker = new JXDatePicker();
+            fechaConsumirPicker.setDate(fechaInicioPicker.getDate());
+
+            // Agrega un ActionListener para validar la fecha seleccionada
+            fechaConsumirPicker.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    Date diaConsumir = fechaConsumirPicker.getDate();
+                    if (diaConsumir != null && (diaConsumir.before(fechaInicioPicker.getDate()) || diaConsumir.after(fechaFinPicker.getDate()))) {
+                        JOptionPane.showMessageDialog(crearExperimentoFrame, "Por favor seleccione una fecha entre la fecha de inicio y la fecha de fin", "Error", JOptionPane.ERROR_MESSAGE);
+                        fechaConsumirPicker.setDate(fechaInicioPicker.getDate()); // Restablece la fecha inicial si se selecciona una fecha fuera del rango
+                    }
+                }
+            });
+
             numBacteriasLabel = new JLabel("Número de Bacterias:");
             numBacteriasField = new JXTextField();
 
@@ -185,7 +202,7 @@ public class UI {
             diaConsumirLabel = new JLabel("Día a partir del cual se consume la comida:");
             diaConsumirField = new JXTextField();
 
-            comidaFinalLabel = new JLabel("Comida Final (dia 30):");
+            comidaFinalLabel = new JLabel("Comida Final:");
             comidaFinalField = new JXTextField();
 
             // Crea un botón para agregar la población al experimento
@@ -204,17 +221,12 @@ public class UI {
                     int diaConsumir = Integer.parseInt(diaConsumirField.getText());
                     int comidaFinal = Integer.parseInt(comidaFinalField.getText());
 
-                    // Valida que los valores de la comida sean enteros menor a 300
-                    if (dosisInicial < 0 || dosisInicial > 300 || comidaFinal < 0 || comidaFinal > 300) {
+                    // Valida que los valores de la comida sean enteros menor a 300000
+                    if (dosisInicial < 0 || dosisInicial > 300000 || comidaFinal < 0 || comidaFinal > 300000) {
                         JOptionPane.showMessageDialog(crearExperimentoFrame, "Las cantidades de comida deben ser valores enteros entre 0 y 300", "Error", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
 
-                    // Valida que el día de consumición sea un valor entre 1 y 29
-                    if (diaConsumir < 1 || diaConsumir > 30) {
-                        JOptionPane.showMessageDialog(crearExperimentoFrame, "El día de incremento debe ser un valor entre 1 y 30", "Error", JOptionPane.ERROR_MESSAGE);
-                        return;
-                    }
 
                     // Creación de la dosis de alimento y la población de bacterias
                     DosisAlimento dosisAlimento = new DosisAlimento(dosisInicial, diaConsumir, comidaFinal);
@@ -229,19 +241,6 @@ public class UI {
                     JOptionPane.showMessageDialog(crearExperimentoFrame, "Población de bacterias agregada correctamente");
 
                     limpiarCampos(crearExperimentoPanel);
-                }
-            });
-
-            // Agrega un ActionListener para que cuando se seleccione el inicio, ponga automáticamente la fecha dentro de 29 días porque será el día 30
-            fechaInicioPicker.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    Date fechaInicio = fechaInicioPicker.getDate();
-                    Calendar cal = Calendar.getInstance();
-                    cal.setTime(fechaInicio);
-                    cal.add(Calendar.DATE, 29);
-                    Date fechaFinalSugerida = cal.getTime();
-                    fechaFinPicker.setDate(fechaFinalSugerida);
                 }
             });
 
@@ -316,7 +315,7 @@ public class UI {
         DosisAlimento dosisAlimento = poblacion.getDosisAlimento();
         mensaje.append("Dosis de alimento por día:\n");
         // Bucle para calcular la cantidad de comida para cada día del experimento
-        for (int dia = 1; dia <= 30; dia++) {
+        for (int dia = 1; dia <= experimentoActual.getDuracion(); dia++) {
             mensaje.append("  Día ").append(dia).append(": ").append(dosisAlimento.calcularCantidadComida(dia, experimentoActual)).append("g\n");
         }
         textArea.setText(mensaje.toString());
