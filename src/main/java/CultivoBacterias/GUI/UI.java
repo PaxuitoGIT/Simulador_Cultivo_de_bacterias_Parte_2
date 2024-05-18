@@ -218,7 +218,7 @@ public class UI {
         diaConsumirField = new JXTextField();
 
         patronConsumirLabel = new JLabel("Patrón de consumo de comida:");
-        String[] patrones = {"Incremento-Decremento", "Incremento Lineal", "Alternativo", "Constante"};
+        String[] patrones = {"Incremento-Decremento", "Decrecimiento Lineal", "Alternativo", "Constante"};
         JComboBox<String> patronComboBox = new JComboBox<>(patrones);
         patronComboBox.addActionListener(new ActionListener() {
             @Override
@@ -249,7 +249,7 @@ public class UI {
 
                 // Valida que los valores de la comida sean enteros menor a 300000
                 if (dosisInicial < 0 || dosisInicial > 300000 || comidaFinal < 0 || comidaFinal > 300000) {
-                    JOptionPane.showMessageDialog(crearExperimentoFrame, "Las cantidades de comida deben ser valores enteros entre 0 y 300", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(crearExperimentoFrame, "Las cantidades de comida deben ser valores enteros entre 0 y 300000", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -428,7 +428,7 @@ public class UI {
         switch (tipoPatronSeleccionado) {
             case "Incremento-Decremento":
                 return dosisAlimento.calcularIncrementoDecremento(dia, experimentoActual);
-            case "Incremento Lineal":
+            case "Decrecimiento Lineal":
                 return dosisAlimento.calcularIncrementoLineal(dia, experimentoActual);
             case "Alternativo":
                 return dosisAlimento.calcularAlternativo(dia, experimentoActual.getDuracion());

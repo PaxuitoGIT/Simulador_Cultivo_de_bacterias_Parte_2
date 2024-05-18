@@ -78,7 +78,7 @@ public class SimulacionMontecarlo extends JFrame {
 
         // Configurar la ventana
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(1200, 900);
+        setSize(1500, 900);
         setLocationRelativeTo(null);
         setVisible(true);
     }

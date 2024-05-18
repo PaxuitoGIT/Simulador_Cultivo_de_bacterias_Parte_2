@@ -1,0 +1,64 @@
+{
+  "poblaciones": [
+    {
+      "nombre": "Zapato",
+      "fechaInicio": "Aug 8, 2024, 12:00:00 AM",
+      "fechaFin": "Sep 20, 2024, 12:00:00 AM",
+      "numBacterias": 1,
+      "temperatura": 2,
+      "luminosidad": "Baja",
+      "dosisAlimento": {
+        "tipoPatron": 0,
+        "comidaInicial": 2,
+        "diaConsumir": 2,
+        "comidaFinal": 2
+      },
+      "tipoPatron": "Alternativo"
+    },
+    {
+      "nombre": "Poblacion 2",
+      "fechaInicio": "May 1, 2024, 12:00:00 AM",
+      "fechaFin": "Jun 19, 2024, 12:00:00 AM",
+      "numBacterias": 2,
+      "temperatura": 21,
+      "luminosidad": "Alta",
+      "dosisAlimento": {
+        "tipoPatron": 0,
+        "comidaInicial": 100,
+        "diaConsumir": 28,
+        "comidaFinal": 3
+      },
+      "tipoPatron": "Incremento Lineal"
+    },
+    {
+      "nombre": "Población 1",
+      "fechaInicio": "May 1, 2024, 12:00:00 AM",
+      "fechaFin": "Jun 30, 2024, 12:00:00 AM",
+      "numBacterias": 10,
+      "temperatura": 23,
+      "luminosidad": "Media",
+      "dosisAlimento": {
+        "tipoPatron": 0,
+        "comidaInicial": 100000,
+        "diaConsumir": 35,
+        "comidaFinal": 1983
+      },
+      "tipoPatron": "Alternativo"
+    },
+    {
+      "nombre": "Aleluya",
+      "fechaInicio": "Apr 18, 2024, 12:00:00 AM",
+      "fechaFin": "May 17, 2024, 12:00:00 AM",
+      "numBacterias": 10000,
+      "temperatura": 2,
+      "luminosidad": "Baja",
+      "dosisAlimento": {
+        "tipoPatron": 0,
+        "comidaInicial": 32,
+        "diaConsumir": 2,
+        "comidaFinal": 2
+      },
+      "tipoPatron": "Alternativo"
+    }
+  ]
+}

@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Segunda y tercera condición">
-      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" afterDir="false" />
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,7 @@
       <recent name="CultivoBacterias" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimulacionMontecarlo">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -110,11 +111,11 @@
       </method>
     </configuration>
     <configuration name="SimulacionMontecarlo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CultivoBacterias.Lógica.SimulacionMontecarlo" />
+      <option name="MAIN_CLASS_NAME" value="CultivoBacterias.GUI.SimulacionMontecarlo" />
       <module name="Cultivo_de_bacterias_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CultivoBacterias.Lógica.*" />
+          <option name="PATTERN" value="CultivoBacterias.GUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,8 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SimulacionMontecarlo" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SimulacionMontecarlo" />
         <item itemvalue="JUnit.PruebasExperimento" />
       </list>
     </recent_temporary>
@@ -165,31 +166,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="24901000" />
-    </task>
-    <task id="LOCAL-00004" summary="Constructor PoblacionBacterias">
-      <option name="closed" value="true" />
-      <created>1714826384079</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1714826384079</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Getters y setters PoblacionBacterias">
-      <option name="closed" value="true" />
-      <created>1714826455622</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1714826455622</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Atributos PoblacionBacterias">
-      <option name="closed" value="true" />
-      <created>1714826565842</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1714826565842</updated>
+      <workItem from="1716034256194" duration="25551000" />
     </task>
     <task id="LOCAL-00007" summary="Constructor Experimento">
       <option name="closed" value="true" />
@@ -559,16 +536,37 @@
       <option name="project" value="LOCAL" />
       <updated>1716062700734</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Colores nº bacterias">
+      <option name="closed" value="true" />
+      <created>1716063219623</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1716063219623</updated>
+    </task>
+    <task id="LOCAL-00054" summary="clean">
+      <option name="closed" value="true" />
+      <created>1716063243273</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1716063243273</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Refactor">
+      <option name="closed" value="true" />
+      <created>1716063263258</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1716063263258</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="guardar experimento en json" />
-    <MESSAGE value="cargar experimento en json" />
-    <MESSAGE value="seleccionar experimento en json" />
     <MESSAGE value="Acciones de los botones" />
     <MESSAGE value="Docs" />
     <MESSAGE value="Tests" />
@@ -591,6 +589,9 @@
     <MESSAGE value="Simular primera regla provisional" />
     <MESSAGE value="Fix números negativos" />
     <MESSAGE value="Segunda y tercera condición" />
-    <option name="LAST_COMMIT_MESSAGE" value="Segunda y tercera condición" />
+    <MESSAGE value="Colores nº bacterias" />
+    <MESSAGE value="clean" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
 </project>
