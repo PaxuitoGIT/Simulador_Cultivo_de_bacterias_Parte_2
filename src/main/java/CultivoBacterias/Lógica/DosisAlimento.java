@@ -33,7 +33,7 @@ public class DosisAlimento implements Serializable {
             case 2: // Incremento Lineal
                 return calcularIncrementoLineal(dia, experimentoActual);
             case 3: // Alternativo
-                return calcularAlternativo(dia);
+                return calcularAlternativo(dia, experimentoActual.getDuracion());
             default:
                 return 0;
         }
@@ -64,12 +64,22 @@ public class DosisAlimento implements Serializable {
         return Math.max(Math.min(cantidadComida, 300000), 0); // Se ajusta el límite superior a 300000
     }
 
-    public int calcularAlternativo(int dia) {
-        // Si el día es impar, se proporciona la comida inicial; si es par, no se proporciona comida
-        if (dia % 2 == 1) {
-            return comidaInicial;
-        } else {
-            return 0;
+    public int calcularAlternativo(int dia, int totalDias) {
+        int intervalo = 2; // Intervalo de días antes de reducir la comida
+        int numReducciones = totalDias / intervalo; // Número de reducciones
+        int reduccionPorIntervalo = (comidaInicial - comidaFinal) / numReducciones;
+
+        int comida = comidaInicial - ((dia / intervalo) * reduccionPorIntervalo);
+
+        // Asegurarse de no reducir la comida por debajo del valor final
+        if (comida < comidaFinal) {
+            comida = comidaFinal;
         }
+
+        return comida;
+    }
+
+    public int calcularConstante(int dia) {
+        return comidaInicial;
     }
 }

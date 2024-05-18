@@ -19,9 +19,10 @@ public class PoblacionBacterias implements Serializable {
     private int temperatura;
     private String luminosidad;
     private DosisAlimento dosisAlimento;
+    private String tipoPatron;
 
     // Constructor de la clase PoblacionBacterias
-    public PoblacionBacterias(String nombre, Date fechaInicio, Date fechaFin, int numBacterias, int temperatura, String luminosidad, DosisAlimento dosisAlimento) {
+    public PoblacionBacterias(String nombre, Date fechaInicio, Date fechaFin, int numBacterias, int temperatura, String luminosidad, DosisAlimento dosisAlimento, String tipoPatron) {
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -29,6 +30,7 @@ public class PoblacionBacterias implements Serializable {
         this.temperatura = temperatura;
         this.luminosidad = luminosidad;
         this.dosisAlimento = dosisAlimento;
+        this.tipoPatron = tipoPatron;
     }
 
     // Getters y setters de la clase PoblacionBacterias
@@ -86,5 +88,13 @@ public class PoblacionBacterias implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getTipoPatron() {
+        return tipoPatron;
+    }
+
+    public void setTipoPatron(String tipoPatron) {
+        this.tipoPatron = tipoPatron;
     }
 }

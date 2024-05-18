@@ -37,7 +37,7 @@ public class UI {
 
      private Experimento experimentoActual;
      private String nombreArchivoActual;
-     private String patronSeleccionado;
+     private String tipoPatronSeleccionado;
 
      // Constructor de la clase UI
     public UI() {
@@ -202,12 +202,12 @@ public class UI {
             diaConsumirField = new JXTextField();
 
             patronConsumirLabel = new JLabel("Patrón de consumo de comida:");
-            String[] patrones = {"Incremento-Decremento", "Incremento Lineal", "Alternativo"};
+            String[] patrones = {"Incremento-Decremento", "Incremento Lineal", "Alternativo","Constante"};
             JComboBox<String> patronComboBox = new JComboBox<>(patrones);
             patronComboBox.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    patronSeleccionado = (String) patronComboBox.getSelectedItem();
+                    tipoPatronSeleccionado = (String) patronComboBox.getSelectedItem();
                 }
             });
 
@@ -240,7 +240,7 @@ public class UI {
 
                     // Creación de la dosis de alimento y la población de bacterias
                     DosisAlimento dosisAlimento = new DosisAlimento(0, dosisInicial, diaConsumir, comidaFinal);
-                    PoblacionBacterias poblacion = new PoblacionBacterias(nombre, fechaInicio, fechaFin, numBacterias, temperatura, luminosidad, dosisAlimento);
+                    PoblacionBacterias poblacion = new PoblacionBacterias(nombre, fechaInicio, fechaFin, numBacterias, temperatura, luminosidad, dosisAlimento, tipoPatronSeleccionado);
 
                     // Agrega la población al experimento actual
                     if(experimentoActual == null) {
@@ -325,7 +325,7 @@ public class UI {
         mensaje.append("Temperatura: ").append(poblacion.getTemperatura()).append("\n");
         mensaje.append("Luminosidad: ").append(poblacion.getLuminosidad()).append("\n");
         DosisAlimento dosisAlimento = poblacion.getDosisAlimento();
-        mensaje.append("Patrón de consumo de comida: ").append(patronSeleccionado).append("\n");
+        mensaje.append("Patrón de consumo de comida: ").append(tipoPatronSeleccionado).append("\n");
         mensaje.append("Dosis de alimento por día:\n");
         // Bucle para calcular la cantidad de comida para cada día del experimento
         for (int dia = 1; dia <= experimentoActual.getDuracion(); dia++) {
@@ -368,13 +368,15 @@ public class UI {
     }
     // Método para calcular la cantidad de comida según el patrón seleccionado
     private int calcularCantidadComidaSegunPatron(int dia, DosisAlimento dosisAlimento, Experimento experimentoActual) {
-        switch (patronSeleccionado) {
+        switch (tipoPatronSeleccionado) {
             case "Incremento-Decremento":
                 return dosisAlimento.calcularIncrementoDecremento(dia, experimentoActual);
             case "Incremento Lineal":
                 return dosisAlimento.calcularIncrementoLineal(dia, experimentoActual);
             case "Alternativo":
-                return dosisAlimento.calcularAlternativo(dia);
+                return dosisAlimento.calcularAlternativo(dia, experimentoActual.getDuracion());
+            case "Constante":
+                return dosisAlimento.calcularConstante(dia);
             default:
                 return 0; // Retornar 0 en caso de que el patrón seleccionado no sea válido
         }
