@@ -13,6 +13,9 @@ public class SimulacionMontecarlo extends JFrame {
     private final int COLUMNAS_CENTRO = COLUMNAS / 2;
     private final int TAMANIO_AREA_RESALTADA = 4;
 
+    private int cantidadBacteriasInicial = 0;
+    private int cantidadComidaInicial = 0;
+
     public SimulacionMontecarlo() {
         super("Simulación Montecarlo");
 
@@ -33,6 +36,15 @@ public class SimulacionMontecarlo extends JFrame {
 
             for (int j = 0; j < COLUMNAS; j++) {
                 botones[i][j] = new JButton();
+                // Asociar ActionListener a cada botón
+                int fila = i;
+                int columna = j;
+                botones[i][j].addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        mostrarDetallesPoblacion(fila, columna);
+                    }
+                });
                 panel.add(botones[i][j]);
             }
         }
@@ -55,6 +67,18 @@ public class SimulacionMontecarlo extends JFrame {
         // Agregar el botón a la ventana
         add(simMonteCarloButton, BorderLayout.SOUTH);
 
+        // Crear el botón de ver detalles de población
+        JButton verDetallesButton = new JButton("Dar detalles de población");
+        verDetallesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                darDatosPoblacion();
+            }
+        });
+
+        // Agregar el botón a la ventana
+        add(verDetallesButton, BorderLayout.NORTH);
+
         // Configurar la ventana
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 600);
@@ -74,6 +98,41 @@ public class SimulacionMontecarlo extends JFrame {
     }
 
     private void simularMontecarlo() {
+        // Implementar la simulación de Montecarlo aquí
+        // Usar cantidadBacteriasInicial y cantidadComidaInicial para inicializar la simulación
+    }
 
+    private void darDatosPoblacion() {
+        // Mostrar un diálogo para ingresar la cantidad de bacterias y comida
+        String inputBacterias = JOptionPane.showInputDialog("Ingrese la cantidad de bacterias:");
+        if (inputBacterias != null && !inputBacterias.isEmpty()) {
+            cantidadBacteriasInicial = Integer.parseInt(inputBacterias);
+        }
+
+        String inputComida = JOptionPane.showInputDialog("Ingrese la cantidad de comida:");
+        if (inputComida != null && !inputComida.isEmpty()) {
+            cantidadComidaInicial = Integer.parseInt(inputComida);
+        }
+    }
+
+    private void mostrarDetallesPoblacion(int fila, int columna) {
+        // Crear un diálogo para mostrar los detalles de la población en la celda seleccionada
+        JFrame detallesFrame = new JFrame("Detalles de la población");
+        detallesFrame.setLayout(new BorderLayout());
+        detallesFrame.setSize(200, 150);
+        detallesFrame.setLocationRelativeTo(this);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(2, 1));
+
+        panel.add(new JLabel("Bacterias: " + cantidadBacteriasInicial));
+        panel.add(new JLabel("Comida: " + cantidadComidaInicial));
+
+        detallesFrame.add(panel, BorderLayout.CENTER);
+        detallesFrame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(SimulacionMontecarlo::new);
     }
 }

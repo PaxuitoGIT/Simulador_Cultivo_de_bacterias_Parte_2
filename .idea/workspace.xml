@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Botón simulación Montecarlo">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" afterDir="false" />
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Resaltar 4x4 del centro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <recent name="CultivoBacterias" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.SimulacionMontecarlo">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -141,8 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.SimulacionMontecarlo" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PruebasExperimento" />
       </list>
     </recent_temporary>
@@ -167,7 +166,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="19383000" />
+      <workItem from="1716034256194" duration="21675000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -513,15 +512,29 @@
       <option name="project" value="LOCAL" />
       <updated>1716057140034</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Crear matriz 20x20 Montecarlo">
+      <option name="closed" value="true" />
+      <created>1716057741701</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1716057741701</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Resaltar 4x4 del centro">
+      <option name="closed" value="true" />
+      <created>1716057788859</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1716057788859</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Obtener nombre de todas las poblaciones del experimento MostrarDetallesPoblacion" />
-    <MESSAGE value="Ventana para seleccionar la población MostrarDetallesPoblacion" />
     <MESSAGE value="Mostrar información detallada seleccionada MostrarDetallesPoblacion" />
     <MESSAGE value="Lógica para mostrar detalles MostrarInformacionDetallesPoblacion" />
     <MESSAGE value="Correciones alimentos" />
@@ -545,6 +558,8 @@
     <MESSAGE value="Fix mostrar detalles de la población" />
     <MESSAGE value="Ordenar poblaciones por fecha, nombre y nº de bacterias" />
     <MESSAGE value="Botón simulación Montecarlo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Botón simulación Montecarlo" />
+    <MESSAGE value="Crear matriz 20x20 Montecarlo" />
+    <MESSAGE value="Resaltar 4x4 del centro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resaltar 4x4 del centro" />
   </component>
 </project>
