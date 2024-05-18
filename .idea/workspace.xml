@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Cultivodebacterias:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PaxuitoGIT&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PaxuitoGIT/Simulador_Cultivo_de_bacterias.git&quot;,
+    &quot;accountId&quot;: &quot;9db08b7b-6c81-4239-a02f-2ea13078d24c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2fv6EzEaC2RrFY699F1qX2kd056" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LaboratorioGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PruebasExperimento.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Cultivodebacterias [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Cultivodebacterias [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Cultivodebacterias [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aads7\OneDrive\Documentos\GitHub\Cultivo de bacterias" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="CultivoBacterias" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="CultivoBacterias.Main" />
+      <module name="Cultivo_de_bacterias_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CultivoBacterias.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PruebasExperimento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cultivodebacterias" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CultivoBacterias.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CultivoBacterias" />
+      <option name="MAIN_CLASS_NAME" value="CultivoBacterias.PruebasExperimento" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PruebasExperimento" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="" />
+      <created>1714669098994</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714669098994</updated>
+      <workItem from="1714669100078" duration="82000" />
+      <workItem from="1714669198371" duration="3173000" />
+      <workItem from="1714824562928" duration="33698000" />
+      <workItem from="1716032767961" duration="648000" />
+    </task>
+    <task id="LOCAL-00001" summary="Commit inicial">
+      <option name="closed" value="true" />
+      <created>1714669954505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714669954505</updated>
+    </task>
+    <task id="LOCAL-00002" summary="UI provisional">
+      <option name="closed" value="true" />
+      <created>1714825454965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714825454965</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Atributos PoblacionBacterias">
+      <option name="closed" value="true" />
+      <created>1714826365055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826365055</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Constructor PoblacionBacterias">
+      <option name="closed" value="true" />
+      <created>1714826384079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826384079</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Getters y setters PoblacionBacterias">
+      <option name="closed" value="true" />
+      <created>1714826455622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826455622</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Atributos PoblacionBacterias">
+      <option name="closed" value="true" />
+      <created>1714826565842</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826565842</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Constructor Experimento">
+      <option name="closed" value="true" />
+      <created>1714826614489</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826614489</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Métodos Experimento">
+      <option name="closed" value="true" />
+      <created>1714826697972</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826697972</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Atributos DosisAlimento">
+      <option name="closed" value="true" />
+      <created>1714826889152</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826889152</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Constructor DosisAlimento">
+      <option name="closed" value="true" />
+      <created>1714826905357</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826905357</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Método DosisAlimento">
+      <option name="closed" value="true" />
+      <created>1714827133058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714827133058</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Etiquetas y casillas CrearNuevoExperimento">
+      <option name="closed" value="true" />
+      <created>1714832177916</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714832177916</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Valores ingresados por el usuario CrearNuevoExperimento">
+      <option name="closed" value="true" />
+      <created>1714832431492</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714832431492</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Agregación de la población al experimento CrearNuevoExperimento">
+      <option name="closed" value="true" />
+      <created>1714832623450</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714832623450</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Mostrar ventana CrearNuevoExperimento">
+      <option name="closed" value="true" />
+      <created>1714832903778</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714832903778</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Correcciones con el alimento">
+      <option name="closed" value="true" />
+      <created>1714833521519</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714833521519</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Correcciones con el alimento">
+      <option name="closed" value="true" />
+      <created>1714834012260</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714834012260</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Obtener nombre de todas las poblaciones del experimento MostrarDetallesPoblacion">
+      <option name="closed" value="true" />
+      <created>1714834148961</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714834148961</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Ventana para seleccionar la población MostrarDetallesPoblacion">
+      <option name="closed" value="true" />
+      <created>1714834288446</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714834288446</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Mostrar información detallada seleccionada MostrarDetallesPoblacion">
+      <option name="closed" value="true" />
+      <created>1714836124760</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714836124760</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Lógica para mostrar detalles MostrarInformacionDetallesPoblacion">
+      <option name="closed" value="true" />
+      <created>1714836608461</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1714836608461</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Correciones alimentos">
+      <option name="closed" value="true" />
+      <created>1714840127622</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714840127622</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Correciones alimentos">
+      <option name="closed" value="true" />
+      <created>1714841078261</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714841078261</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fecha dentro de 30 dias">
+      <option name="closed" value="true" />
+      <created>1714841333266</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1714841333266</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Crear botón eliminar población">
+      <option name="closed" value="true" />
+      <created>1714841814509</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714841814509</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Lógica para eliminar poblacion (parecida al botón de MostrarDetallesPoblacion)">
+      <option name="closed" value="true" />
+      <created>1714842025882</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714842025882</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Mejor posicion de botones">
+      <option name="closed" value="true" />
+      <created>1714843534739</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714843534739</updated>
+    </task>
+    <task id="LOCAL-00028" summary="guardar experimento en json">
+      <option name="closed" value="true" />
+      <created>1714847505040</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1714847505040</updated>
+    </task>
+    <task id="LOCAL-00029" summary="cargar experimento en json">
+      <option name="closed" value="true" />
+      <created>1714847822744</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1714847822744</updated>
+    </task>
+    <task id="LOCAL-00030" summary="seleccionar experimento en json">
+      <option name="closed" value="true" />
+      <created>1714847845741</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714847845741</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Acciones de los botones">
+      <option name="closed" value="true" />
+      <created>1714849209708</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714849209708</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Docs">
+      <option name="closed" value="true" />
+      <created>1714851659899</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714851659899</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Tests">
+      <option name="closed" value="true" />
+      <created>1714854719532</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714854719532</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Ejecutable .jar">
+      <option name="closed" value="true" />
+      <created>1714858118386</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1714858118386</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Métodos Experimento" />
+    <MESSAGE value="Atributos DosisAlimento" />
+    <MESSAGE value="Constructor DosisAlimento" />
+    <MESSAGE value="Método DosisAlimento" />
+    <MESSAGE value="Etiquetas y casillas CrearNuevoExperimento" />
+    <MESSAGE value="Valores ingresados por el usuario CrearNuevoExperimento" />
+    <MESSAGE value="Agregación de la población al experimento CrearNuevoExperimento" />
+    <MESSAGE value="Mostrar ventana CrearNuevoExperimento" />
+    <MESSAGE value="Correcciones con el alimento" />
+    <MESSAGE value="Obtener nombre de todas las poblaciones del experimento MostrarDetallesPoblacion" />
+    <MESSAGE value="Ventana para seleccionar la población MostrarDetallesPoblacion" />
+    <MESSAGE value="Mostrar información detallada seleccionada MostrarDetallesPoblacion" />
+    <MESSAGE value="Lógica para mostrar detalles MostrarInformacionDetallesPoblacion" />
+    <MESSAGE value="Correciones alimentos" />
+    <MESSAGE value="Fecha dentro de 30 dias" />
+    <MESSAGE value="Crear botón eliminar población" />
+    <MESSAGE value="Lógica para eliminar poblacion (parecida al botón de MostrarDetallesPoblacion)" />
+    <MESSAGE value="Mejor posicion de botones" />
+    <MESSAGE value="guardar experimento en json" />
+    <MESSAGE value="cargar experimento en json" />
+    <MESSAGE value="seleccionar experimento en json" />
+    <MESSAGE value="Acciones de los botones" />
+    <MESSAGE value="Docs" />
+    <MESSAGE value="Tests" />
+    <MESSAGE value="Ejecutable .jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>

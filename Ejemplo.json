@@ -1,0 +1,30 @@
+{
+  "poblaciones": [
+    {
+      "nombre": "Bacteria 1",
+      "fechaInicio": "May 1, 2024, 12:00:00 AM",
+      "fechaFin": "May 30, 2024, 12:00:00 AM",
+      "numBacterias": 15,
+      "temperatura": 23,
+      "luminosidad": "Media",
+      "dosisAlimento": {
+        "comidaInicial": 200,
+        "diaConsumir": 18,
+        "comidaFinal": 15
+      }
+    },
+    {
+      "nombre": "Bacteria 2",
+      "fechaInicio": "May 9, 2024, 12:00:00 AM",
+      "fechaFin": "Jun 7, 2024, 12:00:00 AM",
+      "numBacterias": 53,
+      "temperatura": 10,
+      "luminosidad": "Alta",
+      "dosisAlimento": {
+        "comidaInicial": 150,
+        "diaConsumir": 8,
+        "comidaFinal": 9
+      }
+    }
+  ]
+}
