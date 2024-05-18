@@ -1,6 +1,7 @@
 package CultivoBacterias.Lógica;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -99,13 +100,13 @@ public class SimulacionMontecarlo extends JFrame {
 
     private void darDatosPoblacion() {
         // Mostrar un diálogo para ingresar la cantidad de bacterias y comida
-        String inputBacterias = JOptionPane.showInputDialog("Ingrese la cantidad de bacterias:");
+        String inputBacterias = JOptionPane.showInputDialog(this, "Ingrese la cantidad de bacterias:");
         if (inputBacterias != null && !inputBacterias.isEmpty()) {
             int totalBacterias = Integer.parseInt(inputBacterias);
             distribuirBacterias(totalBacterias);
         }
 
-        String inputComida = JOptionPane.showInputDialog("Ingrese la cantidad de comida:");
+        String inputComida = JOptionPane.showInputDialog(this, "Ingrese la cantidad de comida:");
         if (inputComida != null && !inputComida.isEmpty()) {
             int totalComida = Integer.parseInt(inputComida);
             distribuirComida(totalComida);
