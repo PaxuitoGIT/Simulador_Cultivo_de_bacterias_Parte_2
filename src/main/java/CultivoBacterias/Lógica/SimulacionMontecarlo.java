@@ -292,11 +292,27 @@ public class SimulacionMontecarlo extends JFrame {
     }
 
     private void actualizarInterfaz() {
-        // Actualizar el texto de los botones para mostrar la cantidad de bacterias y comida en cada celda
+        // Actualizar el texto y el color de los botones según la cantidad de bacterias en cada celda
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
-                botones[i][j].setText("B: " + cantidadBacterias[i][j]);
+                int numBacterias = cantidadBacterias[i][j];
+                botones[i][j].setText("B: " + numBacterias);
                 botones[i][j].setToolTipText("Comida: " + cantidadComida[i][j]);
+
+                // Asignar color según la cantidad de bacterias
+                if (numBacterias >= 20) {
+                    botones[i][j].setBackground(Color.lightGray);
+                } else if (numBacterias >= 15) {
+                    botones[i][j].setBackground(Color.MAGENTA);
+                } else if (numBacterias >= 10) {
+                    botones[i][j].setBackground(Color.ORANGE);
+                } else if (numBacterias >= 5) {
+                    botones[i][j].setBackground(Color.YELLOW);
+                } else if (numBacterias >= 1) {
+                    botones[i][j].setBackground(Color.GREEN);
+                } else {
+                    botones[i][j].setBackground(Color.WHITE);
+                }
             }
         }
     }
