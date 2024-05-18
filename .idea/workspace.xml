@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Fecha variable">
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Patrones comida">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/DosisAlimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/DosisAlimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejemplo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ejemplo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="8409000" />
+      <workItem from="1716034256194" duration="13737000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -449,16 +448,37 @@
       <option name="project" value="LOCAL" />
       <updated>1716035599759</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Días variables">
+      <option name="closed" value="true" />
+      <created>1716046709354</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716046709354</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Patron provisional">
+      <option name="closed" value="true" />
+      <created>1716050639843</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1716050639843</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Patrones comida">
+      <option name="closed" value="true" />
+      <created>1716051472147</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1716051472147</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Método DosisAlimento" />
-    <MESSAGE value="Etiquetas y casillas CrearNuevoExperimento" />
-    <MESSAGE value="Valores ingresados por el usuario CrearNuevoExperimento" />
     <MESSAGE value="Agregación de la población al experimento CrearNuevoExperimento" />
     <MESSAGE value="Mostrar ventana CrearNuevoExperimento" />
     <MESSAGE value="Correcciones con el alimento" />
@@ -481,6 +501,9 @@
     <MESSAGE value="Clon Parte 1" />
     <MESSAGE value="Cantidad en microgramos" />
     <MESSAGE value="Fecha variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fecha variable" />
+    <MESSAGE value="Días variables" />
+    <MESSAGE value="Patron provisional" />
+    <MESSAGE value="Patrones comida" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patrones comida" />
   </component>
 </project>

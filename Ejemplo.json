@@ -1,30 +1,34 @@
 {
   "poblaciones": [
     {
-      "nombre": "Bacteria 1",
+      "nombre": "Población 1",
       "fechaInicio": "May 1, 2024, 12:00:00 AM",
-      "fechaFin": "May 30, 2024, 12:00:00 AM",
-      "numBacterias": 15,
+      "fechaFin": "Jun 30, 2024, 12:00:00 AM",
+      "numBacterias": 10,
       "temperatura": 23,
       "luminosidad": "Media",
       "dosisAlimento": {
-        "comidaInicial": 200,
-        "diaConsumir": 18,
-        "comidaFinal": 15
-      }
+        "tipoPatron": 0,
+        "comidaInicial": 100000,
+        "diaConsumir": 35,
+        "comidaFinal": 1983
+      },
+      "tipoPatron": "Alternativo"
     },
     {
-      "nombre": "Bacteria 2",
-      "fechaInicio": "May 9, 2024, 12:00:00 AM",
-      "fechaFin": "Jun 7, 2024, 12:00:00 AM",
-      "numBacterias": 53,
-      "temperatura": 10,
+      "nombre": "Poblacion 2",
+      "fechaInicio": "May 1, 2024, 12:00:00 AM",
+      "fechaFin": "Jun 19, 2024, 12:00:00 AM",
+      "numBacterias": 2,
+      "temperatura": 21,
       "luminosidad": "Alta",
       "dosisAlimento": {
-        "comidaInicial": 150,
-        "diaConsumir": 8,
-        "comidaFinal": 9
-      }
+        "tipoPatron": 0,
+        "comidaInicial": 100,
+        "diaConsumir": 28,
+        "comidaFinal": 3
+      },
+      "tipoPatron": "Incremento Lineal"
     }
   ]
 }

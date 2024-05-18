@@ -67,6 +67,8 @@ public class UI {
                 if (nombreArchivo != null) {
                     experimentoActual = ManejadorArchivos.cargarExperimento(nombreArchivo);
                     if (experimentoActual != null) {
+                        PoblacionBacterias poblacion = experimentoActual.getPoblaciones().get(0);
+                        tipoPatronSeleccionado = poblacion.getTipoPatron();
                         JOptionPane.showMessageDialog(frame, "Experimento cargado correctamente");
                     } else {
                         JOptionPane.showMessageDialog(frame, "Error al cargar el experimento", "Error", JOptionPane.ERROR_MESSAGE);
