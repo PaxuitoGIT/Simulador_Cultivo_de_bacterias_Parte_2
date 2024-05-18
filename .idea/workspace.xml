@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Jar file">
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Fix guardar Patrón">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/DosisAlimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/DosisAlimento.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,15 +183,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="27715000" />
-    </task>
-    <task id="LOCAL-00009" summary="Atributos DosisAlimento">
-      <option name="closed" value="true" />
-      <created>1714826889152</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1714826889152</updated>
+      <workItem from="1716034256194" duration="28971000" />
     </task>
     <task id="LOCAL-00010" summary="Constructor DosisAlimento">
       <option name="closed" value="true" />
@@ -579,14 +569,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716064461767</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Fix guardar Patrón">
+      <option name="closed" value="true" />
+      <created>1716066148682</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1716066148682</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tests" />
     <MESSAGE value="Ejecutable .jar" />
     <MESSAGE value="Clon Parte 1" />
     <MESSAGE value="Cantidad en microgramos" />
@@ -611,6 +608,7 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Jar file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jar file" />
+    <MESSAGE value="Fix guardar Patrón" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix guardar Patrón" />
   </component>
 </project>
