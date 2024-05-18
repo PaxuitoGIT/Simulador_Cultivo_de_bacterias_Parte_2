@@ -7,6 +7,7 @@
 package CultivoBacterias.Lógica;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.io.Serializable;
 
@@ -32,5 +33,16 @@ public class Experimento implements Serializable {
     // Método para obtener una población de bacterias del experimento
     public List<PoblacionBacterias> getPoblaciones() {
         return poblaciones;
+    }
+
+    // Método para calcular la duración del experimento en días
+    public int getDuracion() {
+        if(poblaciones.isEmpty()) {
+            return 0;
+        }
+        Date fechaInicio = poblaciones.get(0).getFechaInicio();
+        Date fechaFin = poblaciones.get(0).getFechaFin();
+        long diffEnMili = fechaFin.getTime() - fechaInicio.getTime();
+        return (int) (diffEnMili / (1000 * 60 * 60 * 24)) + 1;
     }
 }
