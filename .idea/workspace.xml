@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Patrones comida">
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Fix mostrar detalles de la población">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ejemplo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ejemplo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +150,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="13737000" />
+      <workItem from="1716034256194" duration="16387000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -472,14 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716051472147</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fix mostrar detalles de la población">
+      <option name="closed" value="true" />
+      <created>1716052020225</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1716052020225</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Agregación de la población al experimento CrearNuevoExperimento" />
     <MESSAGE value="Mostrar ventana CrearNuevoExperimento" />
     <MESSAGE value="Correcciones con el alimento" />
     <MESSAGE value="Obtener nombre de todas las poblaciones del experimento MostrarDetallesPoblacion" />
@@ -504,6 +511,7 @@
     <MESSAGE value="Días variables" />
     <MESSAGE value="Patron provisional" />
     <MESSAGE value="Patrones comida" />
-    <option name="LAST_COMMIT_MESSAGE" value="Patrones comida" />
+    <MESSAGE value="Fix mostrar detalles de la población" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix mostrar detalles de la población" />
   </component>
 </project>
