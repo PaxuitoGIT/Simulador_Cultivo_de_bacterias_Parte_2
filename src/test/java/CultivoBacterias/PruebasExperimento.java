@@ -29,7 +29,7 @@ class PruebasExperimento {
 
     @Test
     void testAgregarPoblacion() {
-        PoblacionBacterias poblacion = new PoblacionBacterias("Poblacion1", new Date(), new Date(), 100, 25, "Media", new DosisAlimento(50, 5, 20));
+        PoblacionBacterias poblacion = new PoblacionBacterias("Poblacion1", new Date(), new Date(), 100, 25, "Media", new DosisAlimento(0, 5, 20, 100), "Incremento-Decremento");
         experimento.agregarPoblacion(poblacion);
         assertFalse(experimento.getPoblaciones().isEmpty(), "El experimento no debería estar vacío después de agregar una población");
         assertTrue(experimento.getPoblaciones().contains(poblacion), "La población agregada debería estar en el experimento");
@@ -37,7 +37,7 @@ class PruebasExperimento {
 
     @Test
     void testEliminarPoblacion() {
-        PoblacionBacterias poblacion = new PoblacionBacterias("Poblacion1", new Date(), new Date(), 100, 25, "Media", new DosisAlimento(50, 5, 20));
+        PoblacionBacterias poblacion = new PoblacionBacterias("Poblacion1", new Date(), new Date(), 100, 25, "Media", new DosisAlimento(0, 5, 20, 100), "Alternativo");
         experimento.agregarPoblacion(poblacion);
         assertTrue(experimento.getPoblaciones().contains(poblacion), "La población debería estar presente antes de eliminarla");
         experimento.eliminarPoblacion(poblacion);
