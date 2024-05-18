@@ -9,6 +9,9 @@ public class SimulacionMontecarlo extends JFrame {
     private JButton[][] botones;
     private final int FILAS = 20;
     private final int COLUMNAS = 20;
+    private final int FILAS_CENTRO = FILAS / 2;
+    private final int COLUMNAS_CENTRO = COLUMNAS / 2;
+    private final int TAMANIO_AREA_RESALTADA = 4;
 
     public SimulacionMontecarlo() {
         super("Simulación Montecarlo");
@@ -34,6 +37,9 @@ public class SimulacionMontecarlo extends JFrame {
             }
         }
 
+        // Resaltar el área 4x4 comenzando desde el centro
+        resaltarAreaCentro();
+
         // Agregar el panel a la ventana
         add(panel, BorderLayout.CENTER);
 
@@ -54,6 +60,17 @@ public class SimulacionMontecarlo extends JFrame {
         setSize(600, 600);
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private void resaltarAreaCentro() {
+        int filaInicio = FILAS_CENTRO - TAMANIO_AREA_RESALTADA / 2;
+        int columnaInicio = COLUMNAS_CENTRO - TAMANIO_AREA_RESALTADA / 2;
+
+        for (int i = filaInicio; i < filaInicio + TAMANIO_AREA_RESALTADA; i++) {
+            for (int j = columnaInicio; j < columnaInicio + TAMANIO_AREA_RESALTADA; j++) {
+                botones[i][j].setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+            }
+        }
     }
 
     private void simularMontecarlo() {
