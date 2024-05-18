@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Cultivodebacterias:jar" />
+      <artifact name="Cultivo_de_bacterias_2:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Fixes" />
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Jar file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/GUI/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/DosisAlimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/DosisAlimento.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +62,7 @@
     "Application.SimulacionMonteCarlo.executor": "Run",
     "Application.SimulacionMontecarlo.executor": "Run",
     "JUnit.PruebasExperimento.executor": "Run",
+    "JUnit.PruebasExperimento.testAgregarPoblacion.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.Cultivodebacterias [clean].executor": "Run",
     "Maven.Cultivodebacterias [compile].executor": "Run",
@@ -91,7 +96,7 @@
       <recent name="CultivoBacterias" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PruebasExperimento.testAgregarPoblacion">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -153,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PruebasExperimento.testAgregarPoblacion" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PruebasExperimento.testAgregarPoblacion" />
         <item itemvalue="Application.SimulacionMontecarlo" />
         <item itemvalue="JUnit.PruebasExperimento" />
       </list>
@@ -180,15 +185,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="26005000" />
-    </task>
-    <task id="LOCAL-00008" summary="Métodos Experimento">
-      <option name="closed" value="true" />
-      <created>1714826697972</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1714826697972</updated>
+      <workItem from="1716034256194" duration="27715000" />
     </task>
     <task id="LOCAL-00009" summary="Atributos DosisAlimento">
       <option name="closed" value="true" />
@@ -574,14 +571,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716064083329</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Jar file">
+      <option name="closed" value="true" />
+      <created>1716064461767</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1716064461767</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Docs" />
     <MESSAGE value="Tests" />
     <MESSAGE value="Ejecutable .jar" />
     <MESSAGE value="Clon Parte 1" />
@@ -606,6 +610,7 @@
     <MESSAGE value="clean" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
+    <MESSAGE value="Jar file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jar file" />
   </component>
 </project>

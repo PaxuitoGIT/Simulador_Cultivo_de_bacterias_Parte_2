@@ -24,22 +24,6 @@ public class DosisAlimento implements Serializable {
     }
 
     // Método para calcular la cantidad de comida disponible para las bacterias en un día dado
-    public int calcularCantidadComida(int dia, Experimento experimentoActual) {
-        switch (tipoPatron) {
-            case 0: // Incremento-Decremento
-                return calcularIncrementoDecremento(dia, experimentoActual);
-            case 1: // Constante
-                return comidaInicial;
-            case 2: // Incremento Lineal
-                return calcularIncrementoLineal(dia, experimentoActual);
-            case 3: // Alternativo
-                return calcularAlternativo(dia, experimentoActual.getDuracion());
-            default:
-                return 0;
-        }
-    }
-
-    // Método para calcular la cantidad de comida disponible para las bacterias en un día dado
     public int calcularIncrementoDecremento(int dia, Experimento experimentoActual) {
         int duracion = experimentoActual.getDuracion();
         // Si el día es menor o igual al día de incremento, la cantidad de comida es la comida inicial

@@ -41,7 +41,7 @@ public class UI {
     private String nombreArchivoActual;
     private String tipoPatronSeleccionado;
     private JComboBox<String> poblacionesComboBox; // Declarar JComboBox como variable de instancia
-
+    private JComboBox<String> patronComboBox;
 
     // Constructor de la clase UI
     public UI() {
@@ -217,15 +217,19 @@ public class UI {
         diaConsumirLabel = new JLabel("Día a partir del cual se consume la comida:");
         diaConsumirField = new JXTextField();
 
+        // Nuevo JComboBox para seleccionar el patrón de consumo de comida
         patronConsumirLabel = new JLabel("Patrón de consumo de comida:");
         String[] patrones = {"Incremento-Decremento", "Decrecimiento Lineal", "Alternativo", "Constante"};
-        JComboBox<String> patronComboBox = new JComboBox<>(patrones);
+        patronComboBox = new JComboBox<>(patrones);
+
+        // Agrega un ActionListener al JComboBox para capturar el patrón seleccionado
         patronComboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tipoPatronSeleccionado = (String) patronComboBox.getSelectedItem();
             }
         });
+
 
 
         comidaFinalLabel = new JLabel("Comida Final:");
@@ -246,8 +250,9 @@ public class UI {
                 int dosisInicial = Integer.parseInt(dosisInicialField.getText());
                 int diaConsumir = Integer.parseInt(diaConsumirField.getText());
                 int comidaFinal = Integer.parseInt(comidaFinalField.getText());
+                String tipoPatronSeleccionado = (String) patronComboBox.getSelectedItem();
 
-                // Valida que los valores de la comida sean enteros menor a 300000
+                // Valida que los valores de la comida sean entero menor a 300000
                 if (dosisInicial < 0 || dosisInicial > 300000 || comidaFinal < 0 || comidaFinal > 300000) {
                     JOptionPane.showMessageDialog(crearExperimentoFrame, "Las cantidades de comida deben ser valores enteros entre 0 y 300000", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
@@ -366,6 +371,18 @@ public class UI {
         } else {
             // Muestra un mensaje de error si no hay poblaciones en el experimento actual
             JOptionPane.showMessageDialog(frame, "No hay poblaciones de bacterias en el experimento", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Obtener la población seleccionada en el JComboBox
+        String seleccion = (String) poblacionesComboBox.getSelectedItem();
+        if (seleccion != null) {
+            for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
+                if (poblacion.getNombre().equals(seleccion)) {
+                    tipoPatronSeleccionado = poblacion.getTipoPatron(); // Obtener el tipo de patrón de la población seleccionada
+                    mostrarInformacionDetalladaPoblacion(poblacion);
+                    break;
+                }
+            }
         }
     }
 
