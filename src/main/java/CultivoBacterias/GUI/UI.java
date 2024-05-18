@@ -12,8 +12,6 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
 import java.util.Date;
 
 import CultivoBacterias.Datos.ManejadorArchivos;
@@ -33,12 +31,13 @@ public class UI {
      JMenu experimentoMenu;
      JMenuItem crearExperimentoItem, abrirExperimentoItem, guardarItem, guardarComoItem;
      JPanel crearExperimentoPanel, mainPanel, buttonsPanel;
-     JLabel nombreLabel, fechaInicioLabel, fechaFinLabel, numBacteriasLabel, temperaturaLabel, luminosidadLabel, dosisInicialLabel, diaConsumirLabel, comidaInicialLabel, comidaFinalLabel;
-     JXTextField nombreField, numBacteriasField, temperaturaField, luminosidadField, dosisInicialField, diaConsumirField, comidaInicialField, comidaFinalField;
+     JLabel nombreLabel, fechaInicioLabel, fechaFinLabel, numBacteriasLabel, temperaturaLabel, luminosidadLabel, dosisInicialLabel, diaConsumirLabel, comidaFinalLabel, patronConsumirLabel;
+     JXTextField nombreField, numBacteriasField, temperaturaField, dosisInicialField, diaConsumirField, comidaFinalField;
      JXDatePicker fechaInicioPicker, fechaFinPicker, fechaConsumirPicker;
 
      private Experimento experimentoActual;
      private String nombreArchivoActual;
+     private String patronSeleccionado;
 
      // Constructor de la clase UI
     public UI() {
@@ -155,7 +154,7 @@ public class UI {
         // Crea un nuevo frame para el experimento
             crearExperimentoFrame = new JFrame("Crear Nuevo Experimento");
             crearExperimentoPanel = new JPanel();
-            crearExperimentoPanel.setLayout(new GridLayout(0,2,10,10));
+            crearExperimentoPanel.setLayout(new GridLayout(0,2,15,15));
 
             // Crea los campos de texto y etiquetas para los datos de la población
             nombreLabel = new JLabel("Nombre:");
@@ -202,6 +201,17 @@ public class UI {
             diaConsumirLabel = new JLabel("Día a partir del cual se consume la comida:");
             diaConsumirField = new JXTextField();
 
+            patronConsumirLabel = new JLabel("Patrón de consumo de comida:");
+            String[] patrones = {"Incremento-Decremento", "Incremento Lineal", "Alternativo"};
+            JComboBox<String> patronComboBox = new JComboBox<>(patrones);
+            patronComboBox.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    patronSeleccionado = (String) patronComboBox.getSelectedItem();
+                }
+            });
+
+
             comidaFinalLabel = new JLabel("Comida Final:");
             comidaFinalField = new JXTextField();
 
@@ -229,7 +239,7 @@ public class UI {
 
 
                     // Creación de la dosis de alimento y la población de bacterias
-                    DosisAlimento dosisAlimento = new DosisAlimento(dosisInicial, diaConsumir, comidaFinal);
+                    DosisAlimento dosisAlimento = new DosisAlimento(0, dosisInicial, diaConsumir, comidaFinal);
                     PoblacionBacterias poblacion = new PoblacionBacterias(nombre, fechaInicio, fechaFin, numBacterias, temperatura, luminosidad, dosisAlimento);
 
                     // Agrega la población al experimento actual
@@ -261,6 +271,8 @@ public class UI {
             crearExperimentoPanel.add(dosisInicialField);
             crearExperimentoPanel.add(diaConsumirLabel);
             crearExperimentoPanel.add(diaConsumirField);
+            crearExperimentoPanel.add(patronConsumirLabel);
+            crearExperimentoPanel.add(patronComboBox);
             crearExperimentoPanel.add(comidaFinalLabel);
             crearExperimentoPanel.add(comidaFinalField);
             crearExperimentoPanel.add(agregarPoblacionButton);
@@ -313,10 +325,11 @@ public class UI {
         mensaje.append("Temperatura: ").append(poblacion.getTemperatura()).append("\n");
         mensaje.append("Luminosidad: ").append(poblacion.getLuminosidad()).append("\n");
         DosisAlimento dosisAlimento = poblacion.getDosisAlimento();
+        mensaje.append("Patrón de consumo de comida: ").append(patronSeleccionado).append("\n");
         mensaje.append("Dosis de alimento por día:\n");
         // Bucle para calcular la cantidad de comida para cada día del experimento
         for (int dia = 1; dia <= experimentoActual.getDuracion(); dia++) {
-            mensaje.append("  Día ").append(dia).append(": ").append(dosisAlimento.calcularCantidadComida(dia, experimentoActual)).append("g\n");
+            mensaje.append("  Día ").append(dia).append(": ").append(calcularCantidadComidaSegunPatron(dia, dosisAlimento, experimentoActual)).append("g\n");
         }
         textArea.setText(mensaje.toString());
     }
@@ -351,6 +364,19 @@ public class UI {
             }
         } else {
             JOptionPane.showMessageDialog(frame, "No hay poblaciones de bacterias en el experimento", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    // Método para calcular la cantidad de comida según el patrón seleccionado
+    private int calcularCantidadComidaSegunPatron(int dia, DosisAlimento dosisAlimento, Experimento experimentoActual) {
+        switch (patronSeleccionado) {
+            case "Incremento-Decremento":
+                return dosisAlimento.calcularIncrementoDecremento(dia, experimentoActual);
+            case "Incremento Lineal":
+                return dosisAlimento.calcularIncrementoLineal(dia, experimentoActual);
+            case "Alternativo":
+                return dosisAlimento.calcularAlternativo(dia);
+            default:
+                return 0; // Retornar 0 en caso de que el patrón seleccionado no sea válido
         }
     }
 }
