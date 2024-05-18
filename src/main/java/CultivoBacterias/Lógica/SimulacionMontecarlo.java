@@ -15,6 +15,7 @@ public class SimulacionMontecarlo extends JFrame {
 
     private int cantidadBacteriasInicial = 0;
     private int cantidadComidaInicial = 0;
+    private JFrame detallesFrame;
 
     public SimulacionMontecarlo() {
         super("Simulación Montecarlo");
@@ -93,6 +94,9 @@ public class SimulacionMontecarlo extends JFrame {
         for (int i = filaInicio; i < filaInicio + TAMANIO_AREA_RESALTADA; i++) {
             for (int j = columnaInicio; j < columnaInicio + TAMANIO_AREA_RESALTADA; j++) {
                 botones[i][j].setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                // Distribuir equitativamente las bacterias y la comida dentro del área resaltada
+                botones[i][j].setText("B: " + (cantidadBacteriasInicial / (TAMANIO_AREA_RESALTADA * TAMANIO_AREA_RESALTADA)));
+                botones[i][j].setToolTipText("Comida: " + (cantidadComidaInicial / (TAMANIO_AREA_RESALTADA * TAMANIO_AREA_RESALTADA)));
             }
         }
     }
@@ -116,8 +120,13 @@ public class SimulacionMontecarlo extends JFrame {
     }
 
     private void mostrarDetallesPoblacion(int fila, int columna) {
+        // Cerrar la ventana anterior si existe
+        if (detallesFrame != null) {
+            detallesFrame.dispose();
+        }
+
         // Crear un diálogo para mostrar los detalles de la población en la celda seleccionada
-        JFrame detallesFrame = new JFrame("Detalles de la población");
+        detallesFrame = new JFrame("Detalles de la población en la celda (" + (fila + 1) + ", " + (columna + 1) + ")");
         detallesFrame.setLayout(new BorderLayout());
         detallesFrame.setSize(200, 150);
         detallesFrame.setLocationRelativeTo(this);
@@ -125,8 +134,8 @@ public class SimulacionMontecarlo extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(2, 1));
 
-        panel.add(new JLabel("Bacterias: " + cantidadBacteriasInicial));
-        panel.add(new JLabel("Comida: " + cantidadComidaInicial));
+        panel.add(new JLabel("Bacterias: " + botones[fila][columna].getText()));
+        panel.add(new JLabel("Comida: " + botones[fila][columna].getToolTipText()));
 
         detallesFrame.add(panel, BorderLayout.CENTER);
         detallesFrame.setVisible(true);
