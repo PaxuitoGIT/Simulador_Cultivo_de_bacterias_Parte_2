@@ -28,7 +28,7 @@ public class UI {
     // Atributos de la clase UI
     JFrame frame, crearExperimentoFrame;
     JTextArea textArea;
-    JButton verDetallesButton, agregarPoblacionButton, eliminarPoblacionButton;
+    JButton verDetallesButton, agregarPoblacionButton, eliminarPoblacionButton, simMonteCarloButton;
     JMenuBar menuBar;
     JMenu experimentoMenu;
     JMenuItem crearExperimentoItem, abrirExperimentoItem, guardarItem, guardarComoItem;
@@ -144,9 +144,19 @@ public class UI {
             }
         });
 
+        // Crea un botón para simular el experimento Montecarlo
+        simMonteCarloButton = new JButton("Simular Montecarlo");
+        simMonteCarloButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
         buttonsPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         buttonsPanel.add(verDetallesButton);
         buttonsPanel.add(eliminarPoblacionButton);
+        buttonsPanel.add(simMonteCarloButton);
 
         frame.add(buttonsPanel, BorderLayout.SOUTH);
         frame.add(mainPanel);
