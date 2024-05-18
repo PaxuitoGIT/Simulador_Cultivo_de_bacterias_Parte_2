@@ -20,6 +20,7 @@ import CultivoBacterias.Datos.ManejadorArchivos;
 import CultivoBacterias.Lógica.DosisAlimento;
 import CultivoBacterias.Lógica.Experimento;
 import CultivoBacterias.Lógica.PoblacionBacterias;
+import CultivoBacterias.Lógica.SimulacionMontecarlo;
 import org.jdesktop.swingx.JXDatePicker;
 import org.jdesktop.swingx.JXTextField;
 
@@ -149,7 +150,7 @@ public class UI {
         simMonteCarloButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new SimulacionMontecarlo();
             }
         });
 
