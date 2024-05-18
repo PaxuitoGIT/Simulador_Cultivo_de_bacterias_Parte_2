@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Resaltar 4x4 del centro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Ventanas emergentes que se cierran al abrir una nueva">
       <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +165,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="21675000" />
+      <workItem from="1716034256194" duration="22186000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -528,15 +527,29 @@
       <option name="project" value="LOCAL" />
       <updated>1716057788859</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Casilla interactiva provisional">
+      <option name="closed" value="true" />
+      <created>1716060079776</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1716060079776</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Ventanas emergentes que se cierran al abrir una nueva">
+      <option name="closed" value="true" />
+      <created>1716060359114</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1716060359114</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mostrar información detallada seleccionada MostrarDetallesPoblacion" />
-    <MESSAGE value="Lógica para mostrar detalles MostrarInformacionDetallesPoblacion" />
     <MESSAGE value="Correciones alimentos" />
     <MESSAGE value="Fecha dentro de 30 dias" />
     <MESSAGE value="Crear botón eliminar población" />
@@ -560,6 +573,8 @@
     <MESSAGE value="Botón simulación Montecarlo" />
     <MESSAGE value="Crear matriz 20x20 Montecarlo" />
     <MESSAGE value="Resaltar 4x4 del centro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resaltar 4x4 del centro" />
+    <MESSAGE value="Casilla interactiva provisional" />
+    <MESSAGE value="Ventanas emergentes que se cierran al abrir una nueva" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ventanas emergentes que se cierran al abrir una nueva" />
   </component>
 </project>
