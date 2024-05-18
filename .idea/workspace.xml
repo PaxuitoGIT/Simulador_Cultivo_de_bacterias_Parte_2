@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Repartos de bacterias y comida a cada casilla">
+    <list default="true" id="f7689b0d-77bb-450e-a528-199309f0c9ea" name="Changes" comment="Ajuste de texto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CultivoBacterias/Lógica/SimulacionMontecarlo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +166,7 @@
       <workItem from="1714669198371" duration="3173000" />
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
-      <workItem from="1716034256194" duration="22487000" />
+      <workItem from="1716034256194" duration="23757000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -551,14 +552,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716060606527</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Ajuste de texto">
+      <option name="closed" value="true" />
+      <created>1716061067514</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1716061067514</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fecha dentro de 30 dias" />
     <MESSAGE value="Crear botón eliminar población" />
     <MESSAGE value="Lógica para eliminar poblacion (parecida al botón de MostrarDetallesPoblacion)" />
     <MESSAGE value="Mejor posicion de botones" />
@@ -583,6 +591,7 @@
     <MESSAGE value="Casilla interactiva provisional" />
     <MESSAGE value="Ventanas emergentes que se cierran al abrir una nueva" />
     <MESSAGE value="Repartos de bacterias y comida a cada casilla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repartos de bacterias y comida a cada casilla" />
+    <MESSAGE value="Ajuste de texto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste de texto" />
   </component>
 </project>

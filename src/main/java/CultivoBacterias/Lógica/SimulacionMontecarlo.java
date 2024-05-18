@@ -5,6 +5,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class SimulacionMontecarlo extends JFrame {
     private JButton[][] botones;
@@ -16,6 +17,7 @@ public class SimulacionMontecarlo extends JFrame {
 
     private int[][] cantidadBacterias;
     private int[][] cantidadComida;
+    private Random random = new Random();
 
     public SimulacionMontecarlo() {
         super("Simulación Montecarlo");
@@ -94,8 +96,110 @@ public class SimulacionMontecarlo extends JFrame {
     }
 
     private void simularMontecarlo() {
-        // Implementar la simulación de Montecarlo aquí
-        // Usar cantidadBacterias y cantidadComida para inicializar la simulación
+        // Recorremos todas las celdas
+        for (int i = 0; i < FILAS; i++) {
+            for (int j = 0; j < COLUMNAS; j++) {
+                // Comprobamos si hay suficiente comida para que una bacteria pueda comer 20 microgramos
+                if (cantidadComida[i][j] >= 20) {
+                    // La bacteria come 20 microgramos de comida
+                    cantidadComida[i][j] -= 20;
+
+                    // Generamos un número aleatorio entre 0 y 99
+                    int aleatorio = (int) (Math.random() * 100);
+
+                    // Si el número es menor que 3, la bacteria muere
+                    if (aleatorio < 3) {
+                        cantidadBacterias[i][j] = 0;
+                    }
+                    // Si el número está entre 3 y 59, la bacteria se queda en la misma celda
+                    else if (aleatorio < 60) {
+                        // No hacemos nada, la bacteria se queda en la misma celda
+                    }
+                    // Si el número está entre 60 y 99, la bacteria se mueve a una celda contigua (si es posible)
+                    else {
+                        // Buscamos una celda contigua válida
+                        boolean movido = false;
+                        int[] nuevaPosicion = buscarCeldaContigua(i, j);
+                        if (nuevaPosicion != null) {
+                            // Movemos la bacteria a la nueva celda
+                            cantidadBacterias[nuevaPosicion[0]][nuevaPosicion[1]]++;
+                            cantidadBacterias[i][j]--;
+                            movido = true;
+                        }
+
+                        // Si no se pudo mover, la bacteria se queda en la misma celda
+                        if (!movido) {
+                            // No hacemos nada, la bacteria se queda en la misma celda
+                        }
+                    }
+                }
+                // Si no hay suficiente comida para que la bacteria coma 20 microgramos, comprobamos si hay suficiente para comer 10 microgramos
+                else if (cantidadComida[i][j] > 9) {
+                    // La bacteria come 10 microgramos de comida
+                    cantidadComida[i][j] -= 10;
+
+                    // Generamos un número aleatorio entre 0 y 99
+                    int aleatorio = (int) (Math.random() * 100);
+
+                    // Si el número es menor que 6, la bacteria muere
+                    if (aleatorio < 6) {
+                        cantidadBacterias[i][j] = 0;
+                    }
+                    // Si el número está entre 6 y 19, la bacteria se queda en la misma celda
+                    else if (aleatorio < 20) {
+                        // No hacemos nada, la bacteria se queda en la misma celda
+                    }
+                    // Si el número está entre 20 y 99, la bacteria se mueve a una celda contigua (si es posible)
+                    else {
+                        // Buscamos una celda contigua válida
+                        boolean movido = false;
+                        int[] nuevaPosicion = buscarCeldaContigua(i, j);
+                        if (nuevaPosicion != null) {
+                            // Movemos la bacteria a la nueva celda
+                            cantidadBacterias[nuevaPosicion[0]][nuevaPosicion[1]]++;
+                            cantidadBacterias[i][j]--;
+                            movido = true;
+                        }
+
+                        // Si no se pudo mover, la bacteria se queda en la misma celda
+                        if (!movido) {
+                            // No hacemos nada, la bacteria se queda en la misma celda
+                        }
+                    }
+                }
+                // Si hay 9 microgramos o menos de comida, la bacteria muere
+                else {
+                    cantidadBacterias[i][j] = 0;
+                }
+            }
+        }
+
+        // Actualizamos la interfaz gráfica
+        actualizarInterfaz();
+    }
+
+    // Método para buscar una celda contigua válida
+    private int[] buscarCeldaContigua(int fila, int columna) {
+        // Definimos los desplazamientos posibles en las filas y columnas
+        int[] deltaFilas = {-1, 0, 1, 0};
+        int[] deltaColumnas = {0, 1, 0, -1};
+
+        // Iteramos sobre los posibles desplazamientos
+        for (int k = 0; k < deltaFilas.length; k++) {
+            int nuevaFila = fila + deltaFilas[k];
+            int nuevaColumna = columna + deltaColumnas[k];
+
+            // Verificamos si la nueva posición es válida
+            if (nuevaFila >= 0 && nuevaFila < FILAS && nuevaColumna >= 0 && nuevaColumna < COLUMNAS) {
+                // Si hay suficiente comida en la celda contigua, retornamos la nueva posición
+                if (cantidadComida[nuevaFila][nuevaColumna] > 0) {
+                    return new int[]{nuevaFila, nuevaColumna};
+                }
+            }
+        }
+
+        // Si no se encontró una celda contigua válida, retornamos null
+        return null;
     }
 
     private void darDatosPoblacion() {
@@ -150,3 +254,4 @@ public class SimulacionMontecarlo extends JFrame {
         SwingUtilities.invokeLater(SimulacionMontecarlo::new);
     }
 }
+
