@@ -2,6 +2,8 @@
 
 Link del repositorio: https://github.com/PaxuitoGIT/Simulador_Cultivo_de_bacterias_Parte_2
 
+Edit lunes 20/5/24: Se ha corregido un error que no mostraba bien los detalles de la población cuando se creaba uno nuevo.
+
 ## Análisis y descripción de la aplicación
 
 En esta parte, he trabajado en base al código ya creado en la parte 1, por lo que muchos de los añadidos son ampliaciones y mejoras al programa.
