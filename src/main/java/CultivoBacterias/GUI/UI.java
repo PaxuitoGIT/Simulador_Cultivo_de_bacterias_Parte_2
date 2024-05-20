@@ -362,6 +362,7 @@ public class UI {
                 if (seleccion != null) {
                     for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
                         if (poblacion.getNombre().equals(seleccion)) {
+                            tipoPatronSeleccionado = poblacion.getTipoPatron(); // Obtener el tipo de patrón de la población seleccionada
                             mostrarInformacionDetalladaPoblacion(poblacion);
                             break;
                         }
@@ -372,21 +373,8 @@ public class UI {
             // Muestra un mensaje de error si no hay poblaciones en el experimento actual
             JOptionPane.showMessageDialog(frame, "No hay poblaciones de bacterias en el experimento", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
-        // Obtener la población seleccionada en el JComboBox
-        String seleccion = (String) poblacionesComboBox.getSelectedItem();
-        if (seleccion != null) {
-            for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
-                if (poblacion.getNombre().equals(seleccion)) {
-                    tipoPatronSeleccionado = poblacion.getTipoPatron(); // Obtener el tipo de patrón de la población seleccionada
-                    mostrarInformacionDetalladaPoblacion(poblacion);
-                    break;
-                }
-            }
-        }
     }
 
-    // Método para mostrar información detallada de una población
     private void mostrarInformacionDetalladaPoblacion(PoblacionBacterias poblacion) {
         // Crea un StringBuilder para construir el mensaje con los detalles de la población
         StringBuilder mensaje = new StringBuilder();
@@ -397,8 +385,14 @@ public class UI {
         mensaje.append("Número de bacterias: ").append(poblacion.getNumBacterias()).append("\n");
         mensaje.append("Temperatura: ").append(poblacion.getTemperatura()).append("\n");
         mensaje.append("Luminosidad: ").append(poblacion.getLuminosidad()).append("\n");
+
+        if (tipoPatronSeleccionado != null) {
+            mensaje.append("Patrón de consumo de comida: ").append(tipoPatronSeleccionado).append("\n");
+        } else {
+            mensaje.append("Patrón de consumo de comida: No disponible\n");
+        }
+
         DosisAlimento dosisAlimento = poblacion.getDosisAlimento();
-        mensaje.append("Patrón de consumo de comida: ").append(tipoPatronSeleccionado).append("\n");
         mensaje.append("Dosis de alimento por día:\n");
         // Bucle para calcular la cantidad de comida para cada día del experimento
         for (int dia = 1; dia <= experimentoActual.getDuracion(); dia++) {
@@ -406,6 +400,7 @@ public class UI {
         }
         textArea.setText(mensaje.toString());
     }
+
 
     // Método para limpiar los campos de texto en el panel de creación de experimento
     private void limpiarCampos(JPanel crearExperimentoPanel) {

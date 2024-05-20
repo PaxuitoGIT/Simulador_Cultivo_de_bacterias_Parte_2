@@ -35,12 +35,12 @@
     &quot;assignee&quot;: &quot;PaxuitoGIT&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/PaxuitoGIT/Simulador_Cultivo_de_bacterias_Parte_2.git&quot;,
-    &quot;accountId&quot;: &quot;9db08b7b-6c81-4239-a02f-2ea13078d24c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/PaxuitoGIT/Simulador_Cultivo_de_bacterias_Parte_2.git",
+    "accountId": "97befb6f-05d9-4c9c-b19c-d20d494da974"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -52,37 +52,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.LaboratorioGUI.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.SimulacionMonteCarlo.executor": "Run",
-    "Application.SimulacionMontecarlo.executor": "Run",
-    "JUnit.PruebasExperimento.executor": "Run",
-    "JUnit.PruebasExperimento.testAgregarPoblacion.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.Cultivodebacterias [clean].executor": "Run",
-    "Maven.Cultivodebacterias [compile].executor": "Run",
-    "Maven.Cultivodebacterias [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LaboratorioGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SimulacionMonteCarlo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SimulacionMontecarlo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PruebasExperimento.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PruebasExperimento.testAgregarPoblacion.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Cultivodebacterias [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Cultivodebacterias [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Cultivodebacterias [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -99,7 +99,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="CultivoBacterias.Main" />
-      <module name="Cultivo_de_bacterias_2" />
+      <module name="Cultivodebacterias" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="CultivoBacterias.*" />
@@ -184,6 +184,7 @@
       <workItem from="1714824562928" duration="33698000" />
       <workItem from="1716032767961" duration="648000" />
       <workItem from="1716034256194" duration="28971000" />
+      <workItem from="1716204991161" duration="619000" />
     </task>
     <task id="LOCAL-00010" summary="Constructor DosisAlimento">
       <option name="closed" value="true" />
